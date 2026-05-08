@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "npx jest --silent 2>&1 | tail -5",
+        "description": "Auto-run tests after file edits"
+      }
+    ]
+  }
+}
