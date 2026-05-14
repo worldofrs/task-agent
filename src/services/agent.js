@@ -114,7 +114,7 @@ Be concise and helpful.`;
 
   // Agentic loop — keeps running until Claude stops requesting tools
   let response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 1024,
     system: systemPrompt,
     tools,
@@ -140,7 +140,7 @@ Be concise and helpful.`;
 
     // Ask Claude again with the tool results
     response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 1024,
       system: systemPrompt,
       tools,
